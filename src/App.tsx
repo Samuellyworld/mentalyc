@@ -1,9 +1,13 @@
+// import part that makes up the application
+import Main from "./components/Main/Main";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <h1></h1>
-    </div>
+        <>
+         <Navbar/>
+         <Main />
+        </>
   );
 }
 
