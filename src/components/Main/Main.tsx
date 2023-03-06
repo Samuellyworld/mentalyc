@@ -11,7 +11,7 @@ const Main : () => JSX.Element = () => {
              <p>Hi Maria</p>
              <img src="/assets/help.png" alt="help icon" />
            </IntroContainer>
-           <h3> Upload your session's recordings</h3>
+           <h3> Upload your session&apos;s recordings</h3>
            <Button content={"Upload"}/>
          </MainContainer>   
     );
