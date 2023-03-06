@@ -1,6 +1,13 @@
 // import styled from styled-components
 import styled from 'styled-components';
 
+interface Props {
+  values : {
+    noteType : any,
+    clientName : string
+  }
+}
+
 // modal background styles
 export const ModalBackground = styled.div`
     position: fixed;
@@ -15,7 +22,7 @@ export const ModalBackground = styled.div`
 `;
 
 // modal content styles
-export const ModalContent = styled.div`
+export const ModalContent = styled.div<Props>`
      background-color : white;
      padding : 2rem;
      display flex;
@@ -35,30 +42,31 @@ export const ModalContent = styled.div`
         align-items : center;
         justify-content : center;
 
-      input {
+       input {
         background: #F2F2F2;
         padding : 0.5rem 1rem;
         border-radius : 0.5rem;
         font-family: 'Montserrat', "sans-serif";
         font-style: normal;
-        width : 110%;
-      }
-      input {
         width : 100%;
         font-size : 0.9rem;
-      }
-      .css-b62m3t-container {
+         }
+       .css-b62m3t-container {
         width : 110%;
-      }
-      .css-1swvg1m-control {
+         }
+       .css-1swvg1m-control {
         border-style : none;
-      }
+         }
        
-      Button {
-        width : 50%;
-        color : black;
+       button {
+         width : 50%;
+         background: ${props =>
+                    !props.values?.clientName || !props?.values?.noteType 
+                    ? "#B2B2B2;" 
+                    : "linear-gradient(295.67deg, #DE0D6F 16.23%, #731054 83.77%);"}
+          }
+ 
       }
-     }
 `
 
 // modal close button styles
