@@ -19,6 +19,16 @@ export interface Props {
 // show modal types
 export type ShowModalTypes = [boolean, React.Dispatch<React.SetStateAction<boolean>>]
 
+// modal values types
+export type ModalValuesTypes = [{
+    noteType : null | any,
+    clientName : string
+    }, React.Dispatch<React.SetStateAction<{
+    noteType : null | any,
+    clientName : string
+    }>>];
+
+
 // option value types
 export interface OptionValueTypes {
     value : number,
