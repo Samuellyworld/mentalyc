@@ -66,6 +66,7 @@ const Modal : React.FC<Props> = ({onClick}) => {
                     <Button 
                      content={"Finish Upload"}
                      type={false} onClick={''}
+                     values={values}
                      />
                 </form>
             </ModalContent>

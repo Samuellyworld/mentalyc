@@ -5,9 +5,15 @@ import { ButtonContainer } from "./Button.styles";
 import { ButtonProps } from "../../types";
 
 // JSX Component
-const Button: React.FC<ButtonProps> = ({content, type, onClick}) => {
+const Button: React.FC<ButtonProps> = ({content, type, onClick, values}) => {
     return (
-            <ButtonContainer onClick={type ? onClick : undefined }>
+            <ButtonContainer 
+              onClick={type ? onClick : undefined }
+              disabled={!type ? !values?.clientName || !values?.noteType : undefined}
+              style={{
+                cursor : !type ? !values?.clientName || !values?.noteType? "not-allowed" : "pointer" : "pointer"
+              }}
+              >
               <span>{content}</span>
             </ButtonContainer>
         )

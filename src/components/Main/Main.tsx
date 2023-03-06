@@ -14,7 +14,11 @@ const Main : React.FC<Props> = ({onClick}) => {
              <img src="/assets/help.png" alt="help icon" />
            </IntroContainer>
            <h3> Upload your session&apos;s recordings</h3>
-           <Button onClick={onClick} content={"Upload"} type={true}/>
+           <Button 
+             onClick={onClick}
+             content={"Upload"}
+             type={true} values={''}
+            />
          </MainContainer>   
     );
 }

@@ -6,8 +6,12 @@ declare module "*.svg";
 // button props types
 export interface ButtonProps {
     content : string,
-    onClick :  any,
-    type : boolean
+    onClick :  string | undefined | MouseEventHandler<HTMLButtonElement>,
+    type : boolean,
+    values : undefined | string | {
+        noteType : null | any,
+        clientName : string
+        } | null | any
 }
 
 // modal props types
