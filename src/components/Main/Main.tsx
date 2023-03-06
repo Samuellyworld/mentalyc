@@ -3,8 +3,10 @@ import { IntroContainer, MainContainer } from "./Main.styles";
 
 // import relating component 
 import Button from "../Button/Button";
+import { ModalProps } from "../../types";
 
-const Main : () => JSX.Element = () => {
+// JSX Component
+const Main : React.FC<ModalProps> = ({onClick}) => {
     return ( 
          <MainContainer>
            <IntroContainer>
@@ -12,7 +14,7 @@ const Main : () => JSX.Element = () => {
              <img src="/assets/help.png" alt="help icon" />
            </IntroContainer>
            <h3> Upload your session&apos;s recordings</h3>
-           <Button content={"Upload"}/>
+           <Button onClick={onClick} content={"Upload"}/>
          </MainContainer>   
     );
 }
