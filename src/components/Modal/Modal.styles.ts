@@ -1,6 +1,7 @@
 // import styled from styled-components
 import styled from 'styled-components';
 
+// modal background styles
 export const ModalBackground = styled.div`
     position: fixed;
     top: 0;
@@ -13,17 +14,78 @@ export const ModalBackground = styled.div`
     align-items: center;
 `;
 
+// modal content styles
 export const ModalContent = styled.div`
      background-color : white;
-     padding : 20px;
+     padding : 2rem;
+     display flex;
+     justify-content : center;
+     align-items : center;
+     position: relative;
+     flex-direction : column;
+     border-radius: 0.5rem;
+
+     form {
+        display : flex;
+        flex-direction: column;
+        width : 25rem;
+        padding : 1rem 3rem;
+        gap: 3rem;
+        position : relative;
+        align-items : center;
+        justify-content : center;
+
+      input {
+        background: #F2F2F2;
+        padding : 0.5rem 1rem;
+        border-radius : 0.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        width : 110%;
+      }
+      input {
+        width : 100%;
+      }
+
+      .css-b62m3t-container {
+        width : 110%;
+      }
+      .css-1swvg1m-control {
+        border-style : none;
+      }
+       
+      Button {
+        width : 50%;
+        
+      }
+     }
 `
 
+// modal close button styles
 export const CloseButton = styled.button`
-     position: absolute;
-     top: 10px;
-     right: 10px;
-     background-color: transparent;
      border: none;
-     font-size: 24px;
+     font-size: 1.4rem;
      cursor: pointer;
+     position: absolute;
+     top: 0rem;
+     right : 1rem;
 `
+
+// modal header styles
+export const ModalHeader = styled.p`
+     font-family: 'Poppins', "sans-serif";
+     font-style: normal;
+     font-size: 1rem;
+
+`
+
+// modal sub paragraph styles
+export const ModalSubContent = styled.p`
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 400;
+     line-height : 24px;
+     font-size: 0.7rem;
+     color: #666666;
+`
+ 

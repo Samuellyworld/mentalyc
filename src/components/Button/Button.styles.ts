@@ -7,7 +7,7 @@ export const ButtonContainer = styled.button`
     justify-content : center;
     align-items : center;
     background: linear-gradient(295.67deg, #DE0D6F 16.23%, #731054 83.77%);
-    border-radius : 1rem;
+    border-radius : 0.5rem;
     cursor : pointer;
 
 

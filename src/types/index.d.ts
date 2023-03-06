@@ -6,14 +6,21 @@ declare module "*.svg";
 // button props types
 export interface ButtonProps {
     content : string,
-    onClick : () => void
+    onClick :  any,
+    type : boolean
 }
 
 // modal props types
-export interface ModalProps {
+export interface Props {
      onClick : () => void
 }
 
 
 // show modal types
 export type ShowModalTypes = [boolean, React.Dispatch<React.SetStateAction<boolean>>]
+
+// option value types
+export interface OptionValueTypes {
+    value : number,
+    label : string   
+}
