@@ -39,14 +39,14 @@ export const ModalContent = styled.div`
         background: #F2F2F2;
         padding : 0.5rem 1rem;
         border-radius : 0.5rem;
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', "sans-serif";
         font-style: normal;
         width : 110%;
       }
       input {
         width : 100%;
+        font-size : 0.9rem;
       }
-
       .css-b62m3t-container {
         width : 110%;
       }
@@ -56,7 +56,7 @@ export const ModalContent = styled.div`
        
       Button {
         width : 50%;
-        
+        color : black;
       }
      }
 `

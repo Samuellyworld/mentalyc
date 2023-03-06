@@ -18,12 +18,13 @@ import { dropDownCustomStyles } from "../../utils/utils";
 
 // Modal JSX Component
 const Modal : React.FC<Props> = ({onClick}) => {
+
+    // set initial se
     const [selectedOption, setSelectedOption] = useState(null);
 
     const handleChange = (option : any) => {
         setSelectedOption(option);
-        
-        
+        console.log(selectedOption)
       };
     
     return (
