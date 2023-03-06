@@ -28,6 +28,16 @@ export const noteTypes : OptionValueTypes[] = [
 
 // custom styles for select dropdown
 export const dropDownCustomStyles = {
+    input : (provided: any) => ({
+        ...provided,
+        fontFamily:   'Montserrat, sans-serif',
+        fontSize : "0.9rem",
+    }),
+    singleValue: (provided : any) => ({
+        ...provided,
+        fontFamily: 'Montserrat, sans-serif',
+        fontSize : "0.9rem",
+      }),
     control: (provided: any, state: { isFocused: boolean; }) => ({
       ...provided,
       background: '#F2F2F2',
@@ -46,9 +56,12 @@ export const dropDownCustomStyles = {
       ...provided,
       color: state.isSelected ? '#000' : '#000',
       backgroundColor: state.isSelected ? 'whitesmoke' : '#fff',
+      fontFamily: 'Montserrat, sans-serif',
+      fontSize : "0.9rem"
     }),
     placeholder: (provided: any) => ({
       ...provided,
       color: '#B2B2B2',
+      fontFamily: 'Montserrat, sans-serif'
     }),
   };
