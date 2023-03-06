@@ -4,7 +4,6 @@ import { createGlobalStyle } from 'styled-components';
 // styled components global styles
 export const GlobalStyle = createGlobalStyle`
  
-
   *,
   *:before,
   *:after {
@@ -66,4 +65,23 @@ export const GlobalStyle = createGlobalStyle`
   button {
     all: unset;
   }
+  input {
+    all : unset;
+  }
+  select {
+    outline: none;
+    border: none;
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #B2B2B2;
+  }
+::-moz-placeholder { /* Firefox 19+ */
+    color: #B2B2B2;
+  }
+:-ms-input-placeholder { /* IE 10+ */
+    color: #B2B2B2;
+   }
+:-moz-placeholder { /* Firefox 18- */
+    color: #B2B2B2;;
+   }
   `

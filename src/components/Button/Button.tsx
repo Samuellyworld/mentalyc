@@ -4,9 +4,10 @@ import { ButtonContainer } from "./Button.styles";
 // import props types 
 import { ButtonProps } from "../../types";
 
-const Button: React.FC<ButtonProps> = ({content, onClick}) => {
+// JSX Component
+const Button: React.FC<ButtonProps> = ({content, type, onClick}) => {
     return (
-            <ButtonContainer onClick={onClick}>
+            <ButtonContainer onClick={type ? onClick : undefined }>
               <span>{content}</span>
             </ButtonContainer>
         )
