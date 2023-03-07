@@ -53,17 +53,15 @@ const Modal : React.FC<ModalPropsTypes> = ({onClick, onSubmit}) => {
        clientName : results?.clientName, // client name
        timer : results?.noteType?.value, // timer in seconds
        progress : 0, // progress bar
+       uploadTime : new Date().toISOString(), // the time it was uploaded
        id : Math.random()?.toString(36).substring(2,11) // this generate item
     }
 
-    console.log(newItem, 'new')
     // submit new item
-      await onSubmit(newItem);
-      
-    //   setTimeout(() => {
-    //      // close modal
-    //    onClick()
-    //   }, 100)
+      onSubmit(newItem);  
+ 
+    // close modal
+       onClick()
       
    }
 
