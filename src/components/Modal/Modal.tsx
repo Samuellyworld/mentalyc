@@ -10,16 +10,19 @@ import { useState } from "react";
 import Select from 'react-select';
 
 // import props types from types
-import { ModalValuesTypes, Props } from "../../types";
+import { ModalValuesTypes, ModalPropsTypes } from "../../types";
 
 // import note types from utils
-import { noteTypes } from "../../utils/utils";
+import { filterLabel, noteTypes } from "../../utils/utils";
+
+// import  component being used
 import Button from "../Button/Button";
 
+// custom dropdown styles
 import { dropDownCustomStyles } from "../../utils/utils";
 
 // Modal JSX Component
-const Modal : React.FC<Props> = ({onClick}) => {
+const Modal : React.FC<ModalPropsTypes> = ({onClick, onSubmit}) => {
 
     // set initial values using set state
     const [values, setValues] : ModalValuesTypes = useState({
@@ -37,14 +40,23 @@ const Modal : React.FC<Props> = ({onClick}) => {
     })
   } 
 
-  console.log(values)
+   // handle submit
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)  => {
+      e.preventDefault();
+      // filter later '-'
+    const results = await filterLabel(values);
+
+    console.log(results);
+   }
+
+
     return (
         <ModalBackground>
             <ModalContent values={values}>
                 <CloseButton onClick={onClick}>&times;</CloseButton>
                 <ModalHeader>Complete Your Upload</ModalHeader>
                 <ModalSubContent>Fill in the details below to complete your upload</ModalSubContent>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <Select 
                         value={values?.noteType}
                         onChange={(e) => {

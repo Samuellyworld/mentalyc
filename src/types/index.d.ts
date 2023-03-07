@@ -3,25 +3,41 @@ declare module "*.jpg";
 declare module "*.png";
 declare module "*.svg";
 
+// nested object types for both note types and clientName
+export interface ValuesObjectTypes {
+    [key: string]: string | NestedObject;
+}
+
+interface NestedObject {
+    [key: string]: string;
+  }
+  
+
 // button props types
 export interface ButtonProps {
     content : string,
     onClick :  string | undefined | MouseEventHandler<HTMLButtonElement>,
     type : boolean,
-    values : undefined | string | {
-        noteType : null | any,
-        clientName : string
-        } | null | any
+    values : ValuesObjectTypes | string | any
 }
 
 // modal props types
-export interface Props {
-     onClick : () => void
+export interface ModalPropsTypes {
+     onClick : () => void,
+     onSubmit : (arg : ValuesObjectTypes) => void
+}
+
+// main props types
+export interface MainPropsTypes {
+    onClick : () => void
 }
 
 
 // show modal types
 export type ShowModalTypes = [boolean, React.Dispatch<React.SetStateAction<boolean>>]
+
+// uploadedItems types 
+export type UploadItemsTypes = [ array<T> , React.Dispatch<React.SetStateAction<array<T>>>];
 
 // modal values types
 export type ModalValuesTypes = [{
@@ -38,3 +54,4 @@ export interface OptionValueTypes {
     value : number,
     label : string   
 }
+
