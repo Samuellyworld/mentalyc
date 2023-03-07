@@ -1,5 +1,5 @@
 // importing relevant types
-import { OptionValueTypes } from "../types";
+import { OptionValueTypes, ValuesObjectTypes } from "../types";
 
 // note types
 export const noteTypes : OptionValueTypes[] = [
@@ -28,16 +28,19 @@ export const noteTypes : OptionValueTypes[] = [
 
 // custom styles for select dropdown
 export const dropDownCustomStyles = {
+    // input styles
     input : (provided: any) => ({
         ...provided,
         fontFamily:   'Montserrat, sans-serif',
         fontSize : "0.9rem",
     }),
+    // when a value from the dropdown is populated, the styles
     singleValue: (provided : any) => ({
         ...provided,
         fontFamily: 'Montserrat, sans-serif',
         fontSize : "0.9rem",
       }),
+      // the control styles
     control: (provided: any, state: { isFocused: boolean; }) => ({
       ...provided,
       background: '#F2F2F2',
@@ -45,6 +48,7 @@ export const dropDownCustomStyles = {
       boxShadow: state.isFocused ? 'none' : 'none',
       '&:hover': { borderColor: state.isFocused ? 'none' : 'none' },
     }),
+    // indicator separator styles
     indicatorSeparator: () => ({ display: 'none' }),
     dropdownIndicator: (provided: any, state: { isFocused: boolean; }) => ({
       ...provided,
@@ -52,6 +56,7 @@ export const dropDownCustomStyles = {
       transform: state.isFocused ? 'rotate(180deg)' : null,
       transition: 'transform 0.2s ease-in-out'
     }),
+    // select option styles
     option: (provided: any , state: { isSelected: boolean; }) => ({
       ...provided,
       color: state.isSelected ? '#000' : '#000',
@@ -59,9 +64,27 @@ export const dropDownCustomStyles = {
       fontFamily: 'Montserrat, sans-serif',
       fontSize : "0.9rem"
     }),
+    // placeholder styles 
     placeholder: (provided: any) => ({
       ...provided,
       color: '#B2B2B2',
       fontFamily: 'Montserrat, sans-serif'
     }),
   };
+
+
+  // filter label '-';
+  export const filterLabel = async (object : ValuesObjectTypes| any) => {
+    const labelParts = object.noteType?.label?.split("-");
+    const newLabel = labelParts.shift()?.trim();
+
+    // return new object
+    return {
+        noteType : {
+            label : newLabel,
+            value : object.noteType?.value
+        },
+         clientName : object?.clientName
+
+       }
+  }

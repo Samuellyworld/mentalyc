@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({content, type, onClick, values}) => {
               onClick={type ? onClick : undefined }
               disabled={!type ? !values?.clientName || !values?.noteType : undefined}
               style={{
-                cursor : !type ? !values?.clientName || !values?.noteType? "not-allowed" : "pointer" : "pointer"
+                cursor : !type ? !values?.clientName || !values?.noteType ? "not-allowed" : "pointer" : "pointer"
               }}
               >
               <span>{content}</span>

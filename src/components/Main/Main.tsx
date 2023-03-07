@@ -3,10 +3,12 @@ import { IntroContainer, MainContainer } from "./Main.styles";
 
 // import relating component 
 import Button from "../Button/Button";
-import { Props } from "../../types";
+
+// import relevant types
+import { MainPropsTypes } from "../../types";
 
 // JSX Component
-const Main : React.FC<Props> = ({onClick}) => {
+const Main : React.FC<MainPropsTypes> = ({onClick}) => {
     return ( 
          <MainContainer>
            <IntroContainer>
