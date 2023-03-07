@@ -49,6 +49,7 @@ export const NotesHeader = styled.div`
      display : grid;
      grid-template-columns : 1fr 1fr 1fr;
      padding : 0rem 0.5rem;
+     margin: 0rem 0rem 1rem 0rem;
 
      p {
         font-family: 'Montserrat', "sans-serif";
@@ -62,7 +63,7 @@ export const Notes = styled.div`
       display : grid;
       grid-template-columns : 1fr 1fr 1fr;
       padding : 0.5rem 0.5rem;
-      margin : 1rem 0rem;
+      margin : 0.2rem 0rem;
       box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
 
