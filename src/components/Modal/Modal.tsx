@@ -3,7 +3,7 @@ import { ModalBackground, ModalContent,
          CloseButton, ModalHeader, ModalSubContent 
         } from "./Modal.styles";
 
-// import usestate from react module
+// import useState from react module
 import { useState } from "react";
 
 // import select from react-select
@@ -43,13 +43,31 @@ const Modal : React.FC<ModalPropsTypes> = ({onClick, onSubmit}) => {
    // handle submit
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)  => {
       e.preventDefault();
-      // filter later '-'
-    const results = await filterLabel(values);
 
-    console.log(results);
+      // filter later '-'
+    const results = filterLabel(values);
+
+    // new item 
+    const newItem = {
+       label :  results?.noteType?.label, // note name
+       clientName : results?.clientName, // client name
+       timer : results?.noteType?.value, // timer in seconds
+       progress : 0, // progress bar
+       id : Math.random()?.toString(36).substring(2,11) // this generate item
+    }
+
+    console.log(newItem, 'new')
+    // submit new item
+      await onSubmit(newItem);
+      
+    //   setTimeout(() => {
+    //      // close modal
+    //    onClick()
+    //   }, 100)
+      
    }
 
-
+   // Building block
     return (
         <ModalBackground>
             <ModalContent values={values}>
@@ -82,6 +100,7 @@ const Modal : React.FC<ModalPropsTypes> = ({onClick, onSubmit}) => {
                      />
                 </form>
             </ModalContent>
+
         </ModalBackground>
     );
 }

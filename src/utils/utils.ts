@@ -74,7 +74,7 @@ export const dropDownCustomStyles = {
 
 
   // filter label '-';
-  export const filterLabel = async (object : ValuesObjectTypes| any) => {
+  export const filterLabel = (object : ValuesObjectTypes| any) => {
     const labelParts = object.noteType?.label?.split("-");
     const newLabel = labelParts.shift()?.trim();
 

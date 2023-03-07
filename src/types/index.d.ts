@@ -5,7 +5,7 @@ declare module "*.svg";
 
 // nested object types for both note types and clientName
 export interface ValuesObjectTypes {
-    [key: string]: string | NestedObject;
+    [key: string ]: string | NestedObject | number;
 }
 
 interface NestedObject {
@@ -42,10 +42,10 @@ export type UploadItemsTypes = [ array<T> , React.Dispatch<React.SetStateAction<
 // modal values types
 export type ModalValuesTypes = [{
     noteType : null | any,
-    clientName : string
+    clientName : string,
     }, React.Dispatch<React.SetStateAction<{
     noteType : null | any,
-    clientName : string
+    clientName : string,
     }>>];
 
 

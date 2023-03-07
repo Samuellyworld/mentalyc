@@ -2,7 +2,7 @@
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
 import Modal from "./components/Modal/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // import types
 import { ShowModalTypes,
@@ -11,11 +11,17 @@ import { ShowModalTypes,
 
 // JSX Component;
 const App : () => JSX.Element = () =>  {
+
   // set modal with use state
   const [showModal, setShowModal] : ShowModalTypes = useState(false);
 
   // handle uploads 
   const [uploadedItems , setUploadedItems]: UploadItemsTypes = useState([]);
+
+  
+  useEffect(() => {
+    console.log(uploadedItems);
+  }, [uploadedItems]);
 
   // toggle modal
   const toggleModal = () => {
@@ -23,8 +29,17 @@ const App : () => JSX.Element = () =>  {
   }
 
   // handle new file upload
-  const onSubmit = (newItem: ValuesObjectTypes ) => {
-      setUploadedItems([...uploadedItems, newItem])
+  const onSubmit = async (newItem: ValuesObjectTypes) => {
+       console.log(newItem)
+      
+     // add new item to items list
+      setUploadedItems((prevItems : any) => [...prevItems, newItem]);
+
+      console.log(uploadedItems);
+      // localStorage.setItem("items", JSON.stringify())
+      
+
+      
   }
 
 // building block
