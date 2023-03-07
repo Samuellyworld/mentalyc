@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { ShowModalTypes,
         UploadItemsTypes, ValuesObjectTypes 
        } from "./types";
+import CurrentUploads from "./components/Uploads/Uploads";
 
 // JSX Component;
 const App : () => JSX.Element = () =>  {
@@ -18,10 +19,11 @@ const App : () => JSX.Element = () =>  {
   // handle uploads 
   const [uploadedItems , setUploadedItems]: UploadItemsTypes = useState([]);
 
-  
+// use Effect
   useEffect(() => {
     console.log(uploadedItems);
   }, [uploadedItems]);
+
 
   // toggle modal
   const toggleModal = () => {
@@ -29,17 +31,9 @@ const App : () => JSX.Element = () =>  {
   }
 
   // handle new file upload
-  const onSubmit = async (newItem: ValuesObjectTypes) => {
-       console.log(newItem)
-      
+  const onSubmit = async (newItem: ValuesObjectTypes) => {  
      // add new item to items list
       setUploadedItems((prevItems : any) => [...prevItems, newItem]);
-
-      console.log(uploadedItems);
-      // localStorage.setItem("items", JSON.stringify())
-      
-
-      
   }
 
 // building block
@@ -48,6 +42,7 @@ const App : () => JSX.Element = () =>  {
          <Navbar/>
          <Main onClick={toggleModal}/>
          {showModal && <Modal onClick={toggleModal} onSubmit={onSubmit}/> }
+         <CurrentUploads/>
         </>
   );
 }
