@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { ShowModalTypes,
         UploadItemsTypes, ValuesObjectTypes 
        } from "./types";
-import CurrentUploads from "./components/Uploads/Uploads";
+import CurrentUploads from "./components/UploadsList/UploadsList";
 
 // JSX Component;
 const App : () => JSX.Element = () =>  {
@@ -19,11 +19,14 @@ const App : () => JSX.Element = () =>  {
   // handle uploads 
   const [uploadedItems , setUploadedItems]: UploadItemsTypes = useState([]);
 
-// use Effect
-  useEffect(() => {
-    console.log(uploadedItems);
-  }, [uploadedItems]);
-
+     // Retrieve items from local storage
+     useEffect(() => {
+      const storedItems = localStorage.getItem("items");
+       console.log(storedItems)
+      if (storedItems) {
+          setUploadedItems(JSON.parse(storedItems));
+      }
+    }, []);
 
   // toggle modal
   const toggleModal = () => {
@@ -42,7 +45,7 @@ const App : () => JSX.Element = () =>  {
          <Navbar/>
          <Main onClick={toggleModal}/>
          {showModal && <Modal onClick={toggleModal} onSubmit={onSubmit}/> }
-         <CurrentUploads/>
+         {uploadedItems.length > 0 && <CurrentUploads uploadedItems={uploadedItems} setUploadedItems={setUploadedItems}/>}
         </>
   );
 }

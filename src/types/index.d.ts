@@ -21,6 +21,12 @@ export interface ButtonProps {
     values : ValuesObjectTypes | string | any
 }
 
+// uploadList props types
+export interface UploadListsProps {
+    uploadedItems : array<T>
+    setUploadedItems : React.Dispatch<React.SetStateAction<array<T>>>
+}
+
 // modal props types
 export interface ModalPropsTypes {
      onClick : () => void,
@@ -31,6 +37,7 @@ export interface ModalPropsTypes {
 export interface MainPropsTypes {
     onClick : () => void
 }
+
 
 
 // show modal types
