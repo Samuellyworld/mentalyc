@@ -9,9 +9,8 @@ export interface ValuesObjectTypes {
 }
 
 interface NestedObject {
-    [key: string]: string;
+    [key: string | Number]: string | Number;
   }
-  
 
 // button props types
 export interface ButtonProps {
@@ -38,8 +37,6 @@ export interface MainPropsTypes {
     onClick : () => void
 }
 
-
-
 // show modal types
 export type ShowModalTypes = [boolean, React.Dispatch<React.SetStateAction<boolean>>]
 
@@ -54,7 +51,6 @@ export type ModalValuesTypes = [{
     noteType : null | any,
     clientName : string,
     }>>];
-
 
 // option value types
 export interface OptionValueTypes {

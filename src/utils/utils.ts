@@ -5,24 +5,24 @@ import { OptionValueTypes, ValuesObjectTypes } from "../types";
 export const noteTypes : OptionValueTypes[] = [
     {
       label : "Progress note - 80 left",
-      value : 60 // 60 seconds
+      value : 0.5 // 0.5 minutes
     },
     {
       label : "Soap  note - 70 left",
-      value : 180 // 180 seconds
+      value : 1 // 1 minutes
     },
     {
       label : "EMDR note - 20 left",
-      value : 70 // 70 seconds
+      value : 0.5 // 0.5 minutes
     },
     {
       label : "Couples therapy note - 80 left",
-      value : 20 // 20 seconds
+      value : 0.6 // 0.6 minutes
 
     },
     {
       label: "Family therapy note - 50 left",
-      value : 40 // 40 seconds
+      value : 2 // 2 minutes
     }
 ]
 
