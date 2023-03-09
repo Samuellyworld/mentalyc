@@ -1,6 +1,8 @@
 # Mentalyc.
-Mentalyc is a tool that helps therapits automatically write their therapy notes using AI.
-Demo Live at : https://mentalyc.netlify.app
+- ![WorkFlow](https://github.com/Samuellyworld/mentalyc/blob/main/.github/workflows/eslint.yml/badge.svg)
+
+- Mentalyc is a tool that helps therapits automatically write their therapy notes using AI.
+- Demo Live at : https://mentalyc.netlify.app
 
 
 ### Technologies && Tools.
@@ -18,10 +20,10 @@ Demo Live at : https://mentalyc.netlify.app
 
 ## Demo.
 
-- desktop
+* desktop
 ![image](https://i.postimg.cc/LXD6tj0K/Screenshot-2023-03-09-at-05-49-18.png)
 
-- mobile
+* mobile
 ![image](https://i.postimg.cc/C5Wyk1Yp/IMG-8372.png)
 
 ## Tests.
