@@ -44,6 +44,9 @@ export const MainContainer = styled.div`
     @media screen and (max-width : 500px) {
         margin : 3rem 0rem 0rem ;
     }
+    span {
+        padding : 0.55rem 0rem;
+    }
    }
 `
 
