@@ -6,6 +6,13 @@ export const UploadsContainer = styled.div`
     display : flex;
     flex-direction : column;
     padding : 2rem 3.5rem;
+
+    @media screen and (max-width : 850px) and (min-width: 500px) {
+        padding : 2rem 1.7rem;
+    }
+    @media screen and (max-width: 500px) {
+        padding : 4rem 1rem;
+    }
 `
 
 // uploads header styles
@@ -15,8 +22,12 @@ export const UploadsHeader = styled.div`
     align-items: center;
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
-    border-radius: 16px;
+    border-radius: 7px;
     padding : 0.2rem 1rem;
+
+    @media screen and (max-width: 400px) {
+        gap: 1rem;
+    }
     
     span {
         border-radius: 50%;
@@ -31,11 +42,22 @@ export const UploadsHeader = styled.div`
         font-style: normal;
         font-weight: 500;
         text-align: center;
+
+        @media screen and (max-width : 400px) {
+            width: 1.75rem;
+            height: 1.75rem;
+            padding : 0.28rem 0.5rem;
+
+        }
     }
     p {
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 500;
+
+        @media screen and (max-width : 400px) {
+            font-weight : 400;
+        }
     }
 `
 
@@ -51,11 +73,22 @@ export const NotesHeader = styled.div`
      padding : 0rem 0.5rem;
      margin: 0rem 0rem 1rem 0rem;
 
+     @media screen and (max-width : 650px) {
+        grid-template-columns : 0.35fr 0.35fr 0.35fr;
+     }
+
      p {
         font-family: 'Montserrat', "sans-serif";
         font-weight : bold;
         font-size : 0.9rem;
      }
+     @media screen and (max-width : 500px) {
+        margin: 1rem 0rem 1rem 0rem; 
+        p:nth-last-child(2), p:last-child {
+            display : none;
+          }
+     }
+    
 `
 
 // notes styles
@@ -67,12 +100,35 @@ export const Notes = styled.div`
       box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
 
+   
       p {
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size : 0.9rem;
+
+        @media screen and (max-width : 600px) {
+            font-size : 0.9rem;
+        }
       }
+      p:nth-last-child(2) {
+        @media screen and (max-width : 500px) {
+            display: none;
+        }
+      }
+
+
+      @media screen and (max-width: 600px) and (min-width: 500px) {
+        grid-template-columns : 0.5fr 0.9fr 0.5fr 
+      }
+      @media screen and (max-width: 500px) {
+        grid-template-columns : unset;
+        display : flex;
+        justify-content : space-between;
+        
+      }
+
+
 `
 
 // progress container styles
@@ -84,6 +140,16 @@ export const ProgressContainer = styled.div`
             width : 19px;
             cursor : pointer;
          }
+
+         @media screen and (max-width : 1028px) and (min-width: 600px) {
+            gap : 4rem;
+         }
+         @media screen and (max-width: 600px) and (min-width: 377px) {
+            gap: 2rem;
+         }
+         @media screen and (max-width: 377px) {
+            gap: 0.8rem;
+         }
 `
 // progress  bar styles
 export const ProgressBar = styled.div`
@@ -92,6 +158,10 @@ export const ProgressBar = styled.div`
         background-color: #B2B2B2;
         border-radius: 6px;
         overflow: hidden;
+
+        @media screen and (max-width : 850px) {
+            width : 9rem;
+        }
 `
 
 // bar styles
