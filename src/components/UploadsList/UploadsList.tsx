@@ -64,7 +64,7 @@ const CurrentUploads: React.FC<UploadListsProps> = ({setUploadedItems, uploadedI
                     <p>ETA</p>
                 </NotesHeader>
                 {
-                  uploadedItems?.map((item : any, i: number) => (
+                  uploadedItems?.map((item : any) => (
                     <Notes key={item.id} role="listitem" >
                         <p>{item?.clientName}</p>
                         <p> {item?.label}</p>
