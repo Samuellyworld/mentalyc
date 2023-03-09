@@ -37,9 +37,15 @@ export const ModalContent = styled.div<Props>`
         padding 3rem 2rem;
      }
 
-     @media screen and (max-width : 500px) {
+     @media screen and (max-width : 500px) and (min-width: 350px) {
         padding : 3rem 2rem 2rem;
         width : 90vw;
+        margin : 1rem 0rem 0rem;
+     }
+
+     @media screen and (max-width : 350px) {
+        padding : 3rem 1rem 2rem;
+        width: 94vw;
      }
 
      form {
@@ -61,15 +67,27 @@ export const ModalContent = styled.div<Props>`
         width : 118%;
         font-size : 0.9rem;
 
-        @media screen and (max-width : 500px) {
+        @media screen and (max-width : 500px) and (min-width : 374px) {
           width : 90%;
         }
+        @media screen and (max-width : 374px) and (min-width: 300px) {
+            width : 80%
+        }
+        @media screen and (max-width: 300px) {
+            width : 70%;
+         }
          }
        .css-b62m3t-container {
          width : 128%;
 
-         @media screen and (max-width : 500px) {
+         @media screen and (max-width : 500px) and (min-width : 374px) {
           width : 100%;
+         }
+         @media screen and (max-width : 374px) and (min-width: 300px) {
+           width : 90%;
+         }
+         @media screen and (max-width: 300px) {
+            width : 80%;
          }
          }
        .css-1swvg1m-control {
@@ -82,6 +100,11 @@ export const ModalContent = styled.div<Props>`
                     !props.values?.clientName || !props?.values?.noteType 
                     ? "#B2B2B2;" 
                     : "linear-gradient(295.67deg, #DE0D6F 16.23%, #731054 83.77%);"}
+            @media screen and (max-width : 360px) {
+                span {
+                    font-size: 13px;
+                }
+            }
           }
  
       }
@@ -113,5 +136,12 @@ export const ModalSubContent = styled.p`
      line-height : 24px;
      font-size: 0.7rem;
      color: #666666;
+
+     @media screen and (max-width : 370px) and (min-width: 351px) {
+        font-size : 0.65rem;
+     }
+     @media screen and (max-width: 351px) {
+        font-size : 0.6rem;
+     }
 `
  

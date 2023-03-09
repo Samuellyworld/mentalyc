@@ -69,10 +69,10 @@ const CurrentUploads: React.FC<UploadListsProps> = ({setUploadedItems, uploadedI
                         <p>{item?.clientName}</p>
                         <p> {item?.label}</p>
                         <ProgressContainer>
-                        <ProgressBar>
-                        <Bar style={{width : `${item?.progress}%`}}/>
-                        </ProgressBar>
-                        <img 
+                         <ProgressBar>
+                          <Bar style={{width : `${item?.progress}%`}}/>
+                         </ProgressBar>
+                         <img 
                           onClick={() => handleDelete(item?.id)}
                           src="/assets/delete.png" 
                           alt="delete" 

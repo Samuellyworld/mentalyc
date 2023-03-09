@@ -22,7 +22,7 @@ export const noteTypes : OptionValueTypes[] = [
     },
     {
       label: "Family therapy note - 50 left",
-      value : 2 // 2 minutes
+      value : 10// 2 minutes
     }
 ]
 
