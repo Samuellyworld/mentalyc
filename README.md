@@ -1,5 +1,4 @@
-# Mentalyc.
-- ![WorkFlow](https://github.com/Samuellyworld/mentalyc/blob/main/.github/workflows/eslint.yml/badge.svg)
+# Mentalyc [![Mentalyc CI/CD](https://github.com/Samuellyworld/mentalyc/blob/main/.github/workflows/eslint.yml/badge.svg)](https://github.com/Samuellyworld/mentalyc/blob/main/.github/workflows/eslint.yml)
 
 - Mentalyc is a tool that helps therapits automatically write their therapy notes using AI.
 - Demo Live at : https://mentalyc.netlify.app
