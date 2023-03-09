@@ -1,4 +1,5 @@
-# Mentalyc [![Mentalyc-CI/CD](https://github.com/Samuellyworld/mentalyc/actions/workflows/eslint.yml/badge.svg)](https://github.com/Samuellyworld/mentalyc/actions/workflows/eslint.yml)
+# Mentalyc 
+[![Mentalyc-CI/CD](https://github.com/Samuellyworld/mentalyc/actions/workflows/eslint.yml/badge.svg)](https://github.com/Samuellyworld/mentalyc/actions/workflows/eslint.yml)
 
 - Mentalyc is a tool that helps therapits automatically write their therapy notes using AI.
 - Demo Live at : https://mentalyc.netlify.app
@@ -12,10 +13,10 @@
 
 
 ## functionalities.
-- functional timer
-- functional progress bar
-- persistence [when a user refresh their browser, their notes are still saved]
-- Mobile responsiveness
+- functional timer.
+- functional progress bar.
+- persistence [when a user refresh their browser, their notes are still saved].
+- Mobile responsiveness.
 
 ## Demo.
 ![image](https://i.postimg.cc/LXD6tj0K/Screenshot-2023-03-09-at-05-49-18.png)
