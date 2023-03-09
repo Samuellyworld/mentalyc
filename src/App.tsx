@@ -22,7 +22,6 @@ const App : () => JSX.Element = () =>  {
      // Retrieve items from local storage
      useEffect(() => {
       const storedItems = localStorage.getItem("items");
-       console.log(storedItems)
       if (storedItems) {
           setUploadedItems(JSON.parse(storedItems));
       }
@@ -33,7 +32,7 @@ const App : () => JSX.Element = () =>  {
     setShowModal((prev) => !prev)
   }
 
-  // handle new file upload
+  // handle new items upload
   const onSubmit = async (newItem: ValuesObjectTypes) => {  
      // add new item to items list
       setUploadedItems((prevItems : any) => [...prevItems, newItem]);
@@ -42,7 +41,7 @@ const App : () => JSX.Element = () =>  {
 // building block
   return (
         <>
-         <Navbar/>
+         <Navbar />
          <Main onClick={toggleModal}/>
          {showModal && <Modal onClick={toggleModal} onSubmit={onSubmit}/> }
          {uploadedItems.length > 0 && <CurrentUploads uploadedItems={uploadedItems} setUploadedItems={setUploadedItems}/>}

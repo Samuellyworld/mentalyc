@@ -65,7 +65,7 @@ export const Notes = styled.div`
       padding : 0.5rem 0.5rem;
       margin : 0.2rem 0rem;
       box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      border-radius: 4px;
 
       p {
         font-family: 'Montserrat', sans-serif;

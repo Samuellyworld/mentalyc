@@ -67,7 +67,7 @@ const Modal : React.FC<ModalPropsTypes> = ({onClick, onSubmit}) => {
 
    // Building block
     return (
-        <ModalBackground>
+        <ModalBackground role="dialog">
             <ModalContent values={values}>
                 <CloseButton onClick={onClick}>&times;</CloseButton>
                 <ModalHeader>Complete Your Upload</ModalHeader>
@@ -84,12 +84,16 @@ const Modal : React.FC<ModalPropsTypes> = ({onClick, onSubmit}) => {
                         options={noteTypes}
                         styles={dropDownCustomStyles}
                         placeholder="Note Type"
+                        aria-label="Description"
+                        data-testid='note-type-select'
                         />
                     <input 
                       type="text" 
                       name="clientName"
                       placeholder="Enter client name" 
                       onChange={handleChange}
+                      data-testid="name"
+                      aria-label="Name"
                       />
                     <Button 
                      content={"Finish Upload"}
@@ -98,7 +102,6 @@ const Modal : React.FC<ModalPropsTypes> = ({onClick, onSubmit}) => {
                      />
                 </form>
             </ModalContent>
-
         </ModalBackground>
     );
 }
