@@ -18,7 +18,7 @@
 - persistence [when a user refresh their browser, their notes are still saved].
 - Mobile responsiveness.
 
-## Code Reviews && Style
+## Code Reviews && Style.
 
 - All React components and functional components are written in the `.tsx` format.
 - Test files are saved with a `.test.ts` format.
