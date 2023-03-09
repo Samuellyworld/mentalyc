@@ -13,16 +13,16 @@ export const noteTypes : OptionValueTypes[] = [
     },
     {
       label : "EMDR note - 20 left",
-      value : 0.5 // 0.5 minutes
+      value : 3 // 5 minutes
     },
     {
       label : "Couples therapy note - 80 left",
-      value : 0.6 // 0.6 minutes
+      value : 6 // 6 minutes
 
     },
     {
       label: "Family therapy note - 50 left",
-      value : 10// 2 minutes
+      value : 10// 10 minutes
     }
 ]
 
