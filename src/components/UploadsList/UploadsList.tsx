@@ -1,8 +1,8 @@
 // import useEffect from react
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // import custom styles ;
-import { NestedObject, UploadListsProps, ValuesObjectTypes } from "../../types";
+import { NestedObject, UploadListsProps } from "../../types";
 import { NotesHeader, NotesTableContainer,
          UploadsContainer, UploadsHeader,
          Notes, ProgressContainer, 
@@ -29,12 +29,11 @@ const CurrentUploads: React.FC<UploadListsProps> = ({setUploadedItems, uploadedI
                 0,
                 Math.round((item.timer as number * 60 * 1000 - timeDiff) / 1000)
               );
-              console.log(timeLeft)
+
               const progress = Math.min(
                 100,
                 Math.round((1 - timeLeft / (item.timer as number * 60)) * 100)
               );
-              console.log(progress, "progress")
 
               return { ...item, progress };
             }
@@ -43,7 +42,7 @@ const CurrentUploads: React.FC<UploadListsProps> = ({setUploadedItems, uploadedI
       }, 1000);
   
       return () => clearInterval(timerInterval);
-  }, [uploadedItems]);
+  }, [uploadedItems, setUploadedItems]);
 
   // delete a note
   const handleDelete = (id : number) => {
@@ -53,7 +52,7 @@ const CurrentUploads: React.FC<UploadListsProps> = ({setUploadedItems, uploadedI
 
   // JSX Component
     return (
-        <UploadsContainer>
+        <UploadsContainer data-testid="uploads">
             <UploadsHeader>
                 <span>{uploadedItems?.length}</span>
                 <p>Notes in progress</p>
@@ -66,7 +65,7 @@ const CurrentUploads: React.FC<UploadListsProps> = ({setUploadedItems, uploadedI
                 </NotesHeader>
                 {
                   uploadedItems?.map((item : any, i: number) => (
-                    <Notes key={item.id} >
+                    <Notes key={item.id} role="listitem" >
                         <p>{item?.clientName}</p>
                         <p> {item?.label}</p>
                         <ProgressContainer>

@@ -13,6 +13,8 @@ const Button: React.FC<ButtonProps> = ({content, type, onClick, values}) => {
               style={{
                 cursor : !type ? !values?.clientName || !values?.noteType ? "not-allowed" : "pointer" : "pointer"
               }}
+              data-testid="btn"
+              role="button"
               >
               <span>{content}</span>
             </ButtonContainer>

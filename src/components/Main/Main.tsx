@@ -10,7 +10,7 @@ import { MainPropsTypes } from "../../types";
 // JSX Component
 const Main : React.FC<MainPropsTypes> = ({onClick}) => {
     return ( 
-         <MainContainer>
+         <MainContainer role="main">
            <IntroContainer>
              <p>Hi Maria</p>
              <img src="/assets/help.png" alt="help icon" />

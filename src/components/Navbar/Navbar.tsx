@@ -4,7 +4,7 @@ import { NavbarContainer, Logo } from "./Navbar.styles";
 const Navbar = () => {
     return (
          <>
-          <NavbarContainer>
+          <NavbarContainer role="navigation">
            <Logo alt="mentalyc logo" src="/assets/mentalyc.png"/> 
           </NavbarContainer>
          </>
